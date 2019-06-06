@@ -99,6 +99,8 @@ function getProcessors(keepVars = false) {
     }),
     require('postcss-nested'),
     require('postcss-inherit'),
+    require('postcss-logical')(),
+    require('postcss-dir-pseudo-class')(),
     require('postcss-custom-properties')({
       noValueNotifications: 'error',
       warnings: !keepVars

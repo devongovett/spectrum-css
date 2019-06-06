@@ -53,15 +53,15 @@ governing permissions and limitations under the License.
 
   .spectrum-FieldButton {
     padding: 0 var(--spectrum-dropdown-padding-x);
-    border-top-left-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
-    border-bottom-left-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
+    border-start-start-radius: var(--spectrum-combobox-fieldbutton-border-top-left-radius);
+    border-end-start-radius: var(--spectrum-combobox-fieldbutton-border-bottom-left-radius);
   }
 }
 
 .spectrum-InputGroup-field {
-  border-top-right-radius: var(--spectrum-combobox-textfield-border-top-right-radius);
-  border-bottom-right-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius);
-  border-right-width: var(--spectrum-combobox-field-border-width-right);
+  border-start-end-radius: var(--spectrum-combobox-textfield-border-top-right-radius);
+  border-end-end-radius: var(--spectrum-combobox-textfield-border-bottom-right-radius);
+  border-inline-end: var(--spectrum-combobox-field-border-width-right);
   flex: 1;
 }
 
@@ -71,7 +71,7 @@ governing permissions and limitations under the License.
     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
     position: relative;
-    padding-right: var(--spectrum-combobox-quiet-fieldbutton-padding-right);
+    padding-inline-end: var(--spectrum-combobox-quiet-fieldbutton-padding-right);
     border-bottom: var(--spectrum-textfield-quiet-affixed-border-size) solid;
 
     /* More hitarea */
@@ -112,18 +112,18 @@ governing permissions and limitations under the License.
     min-width: var(--spectrum-datepicker-input-width);
     flex: initial;
     &.spectrum-Datepicker-startField {
-      border-right: 0;
-      padding-right: var(--spectrum-padding);
+      border-inline-end: 0;
+      padding-inline-end: var(--spectrum-padding);
       &.is-invalid,
       &:invalid {
         background-image: none;
-        padding-right: var(--spectrum-padding);
+        padding-inline-end: var(--spectrum-padding);
       }
     }
     &.spectrum-Datepicker-endField {
-      border-left: 0;
+      border-inline-start: 0;
       border-radius: 0;
-      padding-left: var(--spectrum-padding);
+      padding-inline-start: var(--spectrum-padding);
     }
   }
   /* Em dash */
@@ -164,7 +164,7 @@ governing permissions and limitations under the License.
     }
     .spectrum-Datepicker--rangeDash {
       &:before {
-        margin-left: var(--spectrum-datepicker-range-dash-margin-left);
+        margin-inline-start: var(--spectrum-datepicker-range-dash-margin-left);
       }
     }
   }
